@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DA vs DR vs AS: What Each Authority Metric Actually Measures</title>
+<meta name="description" content="Moz Domain Authority, Ahrefs Domain Rating and Semrush Authority Score compared: inputs, scale, update cadence and when to use each one when vetting link prospects.">
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.65;color:#1f2933}
+h1{line-height:1.25}h2{margin-top:2em}
+table{border-collapse:collapse;width:100%;margin:1em 0}th,td{border:1px solid #d0d7de;padding:8px;text-align:left;vertical-align:top}th{background:#f3f5f7}
+code{background:#f3f5f7;padding:1px 4px;border-radius:3px}
+.note{background:#fff8e6;border-left:4px solid #f0b429;padding:10px 14px}
+footer{margin-top:3em;font-size:.9em;color:#616e7c}
+</style>
+</head>
+<body>
+<h1>DA vs DR vs AS: What Each Authority Metric Actually Measures</h1>
+<p>Three numbers dominate link prospecting: Moz Domain Authority (DA), Ahrefs Domain Rating (DR) and Semrush Authority Score (AS). They all run from 0 to 100 and they are all called "authority", so teams treat them as interchangeable. They are not. Each one is built from a different link index with a different formula, and a site can score 45 on one and 20 on another without anything being wrong.</p>
+<p>This page is a short reference for what goes into each metric, so you can pick the right one for the job and stop arguing about why the numbers disagree.</p>
+
+<h2>Side-by-side</h2>
+<table>
+<thead><tr><th></th><th>Moz DA</th><th>Ahrefs DR</th><th>Semrush AS</th></tr></thead>
+<tbody>
+<tr><td>Main input</td><td>Linking root domains plus a machine-learning model trained to predict Google rankings</td><td>Number and DR of unique linking domains, with "link juice" split across each linker's outbound links</td><td>Link power, organic traffic estimate and spam signals combined</td></tr>
+<tr><td>Uses traffic?</td><td>No</td><td>No</td><td>Yes</td></tr>
+<tr><td>Page-level twin</td><td>Page Authority (PA)</td><td>URL Rating (UR)</td><td>Page Authority Score</td></tr>
+<tr><td>Scale</td><td>Logarithmic</td><td>Logarithmic</td><td>Logarithmic</td></tr>
+<tr><td>Spam companion</td><td>Spam Score (1 to 100%)</td><td>None built in</td><td>Toxicity markers in Backlink Audit</td></tr>
+</tbody>
+</table>
+
+<h2>Why the scores disagree</h2>
+<p><strong>Different crawls.</strong> Each company runs its own crawler. A link that Ahrefs found last week may not be in the Moz index yet, and the reverse happens too.</p>
+<p><strong>Different weighting.</strong> DR mostly counts how many strong domains link to you. DA tries to predict ranking ability, so it reacts to patterns in the link profile, not only the count. AS will reward a site with real search traffic even if its link count is modest.</p>
+<p><strong>Logarithmic scales.</strong> Going from 20 to 30 is far easier than going from 60 to 70 on all three. A ten point gap at the low end means little; the same gap at the top is huge.</p>
+
+<h2>Which one to use when</h2>
+<ul>
+<li><strong>Quick first filter on a long list:</strong> DA or DR, whichever your team already has. Consistency matters more than the brand. Do not mix them in one spreadsheet column.</li>
+<li><strong>Spotting link farms:</strong> pair DA with Spam Score. A high DA with a spam score above 30% usually means a bought or networked profile.</li>
+<li><strong>Judging whether a site is alive:</strong> AS or a traffic estimate. A DR 50 domain with zero organic traffic is often an expired domain rebuilt for selling links.</li>
+<li><strong>Choosing which page to ask a link from:</strong> the page-level metric (PA or UR), not the domain number.</li>
+</ul>
+
+<p class="note">Rule of thumb: use one domain metric for sorting, one spam signal for rejecting, and a traffic check for anything you are about to pay for or spend a day pitching.</p>
+
+<h2>A workable vetting order</h2>
+<ol>
+<li>Clean the list down to root domains and remove duplicates.</li>
+<li>Run the whole list through a free <a href="https://padacheckers.com/">Page Authority and DA checker</a> to get DA, PA and Spam Score in one pass.</li>
+<li>Drop anything with a spam score over your threshold (30% is a common line).</li>
+<li>For the survivors, check organic traffic and whether the site still publishes.</li>
+<li>Only then compare DR or AS if a client asks for a specific metric.</li>
+</ol>
+
+<h2>Common mistakes</h2>
+<ul>
+<li>Reporting month-on-month DA changes as wins or losses. Moz recalculates the whole index, so every site can move without anything changing on yours.</li>
+<li>Setting a hard "DA 30+" rule for niche sites. A DA 18 site that is the only blog in your industry can be worth more than a DA 60 general news portal.</li>
+<li>Ignoring the page metric. A strong domain with the link buried on a tag page passes very little.</li>
+</ul>
+
+<footer>Part of the padacheckers notes on link prospect research.</footer>
+</body>
+</html>
